@@ -1,0 +1,45 @@
+<header s class="header">
+    <h1><b>Medicare</b></h1>
+</header>
+<hr>
+
+<content style="text-align: center;">
+   
+            <div class="card">
+                
+                    <div class="card-title"><h3 class="h3">Login</h3></div>
+                    <form [formGroup]="login" (ngSubmit)="submit()">
+                        <div class="email">
+                            <label><b>Select Role:</b> </label>
+                            <select name="Role" class="input" formControlName="role">
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
+                        <div class="email">
+                            <label><b>Email :</b></label>
+                            <input placeholder="Enter Your Email" class="input"
+                            [(ngModel)]="user.emailid" formControlName="emailid">
+                        </div>
+                        <div class="Password">
+                            <label><b>Password :</b></label>
+                            <input placeholder="Enter Your Password" class="input" 
+                            [(ngModel)]="user.password" formControlName="password">
+                        </div>
+                        <div class="btn">
+                            <button class="log" type="submit">Login</button>
+                        </div>
+    
+                    </form>
+
+                    
+                
+                <hr>
+<div class="pr">
+    <p class="p" >New User - <a href="registration">Register Here</a></p>
+
+</div>
+                
+            </div>
+
+</content>

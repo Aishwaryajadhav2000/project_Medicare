@@ -1,0 +1,101 @@
+<section>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="head">
+<h2><b>WELCOME ADMIN</b></h2>
+</div>
+<hr>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a><b>Medicare</b></a>
+    
+                    <a id="a"> About</a>
+                    <a id="a"> Contact</a>
+                    <a id="a"> ViewProducts</a>
+                    <a id="a"> Manage Products</a>
+                </div>
+
+                <div class="col" id="log">
+                    <a id="a" href="#"> Logout</a>
+                </div>
+            </div>
+    
+        </div>
+    </header>
+
+    <hr>
+    <br>
+
+    <div class="row" id="a">
+        <div class="col-md-6 mb-4">
+            <div>
+                <h4><b>Available Products</b></h4>
+            </div>
+        </div>  
+    </div>
+
+    <hr>
+
+    <br>
+    <div id="table">
+        <div class="row" id="rows">
+            <div class="col-6"><button (click)="addmed()">Add Medicines</button></div>
+            <div class="col-6">
+                <div class="search">
+<label>Search : </label>
+                    <input type="text" name="search" [(ngModel)]="searchtext" [ngModelOptions]="{standalone: true}"
+                        placeholder="Search Medicines here">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <table class="table table-bordered">
+                <thead >
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Product Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Qty.Avail</th>
+                    <th scope="col">Unit Price</th>
+                    <!-- <th scope="col">Activate</th> -->
+                    <th scope="col">Edit</th>
+                    
+                </tr>
+                </thead>
+               
+                <tbody>
+                    <tr  *ngFor="let product of product">
+            
+                        <td> {{product.medicinId}}</td>
+                        <td> 
+                            <div *ngFor="let file of product.medicinImages">
+                                <img [src]="file.url"  style="height: 70px;">
+                            </div></td>
+                        <td> {{product.medicinname}}</td>
+                        <td> {{product.brand}}</td>
+                        <td> {{product.quantity}}</td>
+                        <td style="align-items: center;"> <mat-icon>currency_rupee</mat-icon> {{product.price}}</td>
+                        <!-- <td> .medicinNam</td> -->
+                        <td><div>
+                            <mat-icon style="color: red;" (click)="deletemed(product.medicinId)">delete</mat-icon>
+                        </div> 
+                        <div>
+                            <mat-icon (click)="editmedicin(product.medicinId)" style="color: blue;">create</mat-icon>
+                        </div>
+                    </td>
+                    </tr>
+                    <br>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+
+</section>
+

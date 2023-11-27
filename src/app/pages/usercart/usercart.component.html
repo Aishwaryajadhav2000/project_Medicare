@@ -1,0 +1,92 @@
+<section>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a><b>Medicare</b></a>
+
+                    <a id="a"> About</a>
+                    <a id="a"> Contact</a>
+                    <a id="a"> ViewProducts</a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </header>
+
+    <hr>
+    <br>
+
+    <div class="row" id="a">
+        <div class="col">
+            <div>
+                <h4><b>Buy Product </b></h4>
+            </div>
+        </div>
+    </div>
+
+   <hr>
+
+    <br>
+    <div id="table">
+
+
+        <div>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col"> Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col"></th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody >
+                    <tr>
+                        <!-- <div *ngFor="let product of product">
+                            <div *ngFor="let file of product.medicinImages">
+                                <img class="card-img-top" [src]="file.url"  id="image">
+                            </div>
+                        </div> -->
+                        <td> 
+                           <h2><b>{{medicines.medicinname}}</b></h2> 
+                        <h4>Brand : {{ medicines.brand}}</h4>
+                        <h4>Description: {{ medicines.description}}</h4>
+                    
+                    </td>
+                        <td>{{medicines.price}}</td>
+                        <td>1</td>
+                        <td> {{medicines.price}}</td>
+                       
+
+                    </tr>
+                    <br>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-warning" (click)="back()"> Continue Shopping</button>
+                </div>
+
+                <div class="col" style="text-align: center;">
+                    <button class="btn btn-success" (click)="checkout()">CheckOut</button>
+                </div>
+
+                
+            </div>
+           
+          
+        </div>
+
+    </div>
+
+
+</section>

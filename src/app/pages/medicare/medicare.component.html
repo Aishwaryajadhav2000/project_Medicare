@@ -1,0 +1,83 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a><b>Medicare</b></a>
+
+                <a id="a"> About</a>
+                <a id="a"> Contact</a>
+                <a id="a"> ViewProducts</a>
+            </div>
+            <div class="col" id="log">
+                <a id="a" href="registration"> SignUp</a>
+                <a id="a" href="login"> Login</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+<hr>
+
+<content>
+
+    <div class="row" id="imgc">
+        <div>
+            <img src="../../../assets/img1.png" id="img">
+
+        </div>
+    </div>
+
+    <hr>
+    <div style="text-align: center; color: blue;">
+        <h2><b>Most Viewed Medicines</b></h2>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="card-group" id="cardgroup">
+        <div *ngFor="let product of product" class="column" id="col">
+           
+                <div class="card" style="width: 18rem;" id="cardgroup">
+
+                    <div class="row">
+                        <div class="col-6" id="colimh">
+                            <div *ngFor="let file of product.medicinImages">
+                                <img class="card-img-top" [src]="file.url"  id="image">
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h2 class="card-title" id="title">{{product.medicinname}}</h2>
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="card-body" >
+                        <h3 class="card-text">{{product.description}}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{product.price}}</li>
+                    </ul>
+                    
+                    <!-- <div class="card-body">
+                        <a  class="card-link" (click)="buynow(product.medicinId)">Buy Now</a>
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+  
+    </div>
+    
+
+  
+
+
+
+
+
+
+</content>

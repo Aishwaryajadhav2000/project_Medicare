@@ -1,0 +1,31 @@
+.container{
+
+   cursor: pointer; 
+}
+
+#a{
+    margin-left: 3%;
+    height: 20px;
+}
+#log{
+    text-align: center;
+}
+#table{
+  margin-right: 3%;
+  margin-left: 3%;
+}
+#rows{
+    margin-bottom: 2%;
+    font-size: larger;
+}
+
+.head{
+    text-align: center;
+    margin-top: 2%;
+    color: brown;
+}
+
+
+
+
+

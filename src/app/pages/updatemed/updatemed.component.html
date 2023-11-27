@@ -1,0 +1,93 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="mb-4 pb-2 pb-md-0 mb-md-5"><b>Edit Medicine</b></h2>
+              <form (ngSubmit)="submit()">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input [(ngModel)]="medicines.medicinname" [ngModelOptions]="{standalone: true}" type="text"
+                        class="form-control form-control-lg" />
+                      <label class="form-label">Name</label>
+                    </div>
+  
+                  </div>
+  
+  
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input [(ngModel)]="medicines.description" [ngModelOptions]="{standalone: true}" type="text"
+                        id="lastName" class="form-control form-control-lg" />
+                      <label class="form-label" for="lastName">Description</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+  
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input [(ngModel)]="medicines.price" [ngModelOptions]="{standalone: true}" type="tel"
+                        id="phoneNumber" class="form-control form-control-lg" />
+                      <label class="form-label" for="phoneNumber">price</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+  
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input [(ngModel)]="medicines.brand" [ngModelOptions]="{standalone: true}" type="tel"
+                        id="phoneNumber" class="form-control form-control-lg" />
+                      <label class="form-label" for="phoneNumber">brand</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+  
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input [(ngModel)]="medicines.quantity" [ngModelOptions]="{standalone: true}" type="tel"
+                        id="phoneNumber" class="form-control form-control-lg" />
+                      <label class="form-label" for="phoneNumber">Quantity</label>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="row" style="height: 90px; width: 90px;">
+  
+                    <div class="col-6 ">
+  
+                      <input type="file" multiple value="select" #selectFile (change)="anFileSelected($event)"
+                      >
+                      <label class="form-label" for="phoneNumber">Image</label>
+  
+                    </div>
+                  </div>
+  
+                  <!-- [(ngModel)]="medicines.medicinImages" [ngModelOptions]="{standalone: true}" -->
+  
+                  <div class="mt-4 pt-2">
+                    <button type="submit">Submit</button>
+                    <!-- <input class="btn btn-primary btn-lg" type="submit" value="Submit" /> -->
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
